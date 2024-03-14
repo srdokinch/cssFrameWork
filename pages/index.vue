@@ -1,9 +1,5 @@
 <template>
-    <!-- header -->
-    <header class="header">
-      <h1 class="logo"> <a href="#"><img src="~/assets/logo.png" alt="SKY COFFEE"></a></h1>
-    </header>
-    <!-- /header -->
+  <Header />
 
     <!-- main-visual -->
     <div class="main-visual">
@@ -14,15 +10,7 @@
     </div>
     <!-- /main-visual -->
 
-    <!-- global-nav -->
-    <nav class="global-nav">
-      <ul>
-        <li><a href="#">menu</a></li>
-        <li><a href="#">blog</a></li>
-        <li><a href="#">access</a></li>
-      </ul>
-    </nav>
-    <!-- /global-nav -->
+    <Nav />
 
     <main class="content">
 
@@ -103,10 +91,6 @@
 
     </main>
 
-    <!-- footer -->
-    <footer class="footer">
-      <div class="logo"><a href="#"><img src="~/assets/logo-white.png" alt="SKY COFFEE" width="200" height="40"></a></div>
-      <div class="copyright">&copy;Sky Coffee</div>
-    </footer>
-    <!-- /footer -->
+    <Footer />
+
 </template>
