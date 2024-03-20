@@ -10,7 +10,18 @@ export default {
     "./app.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // 'カラー名': 'カラーコード'
+        'main-font': '#24A8BF',
+      },
+    },
+    fontFamily: {
+      hiragino: [
+        'ヒラギノ角ゴシック',
+        'Hiragino Sans',
+      ],
+    },
   },
   plugins: [],
 }
