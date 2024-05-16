@@ -13,7 +13,7 @@ export default {
     extend: {
       colors: {
         // 'カラー名': 'カラーコード'
-        'main-font': '#24A8BF',
+        'main-colour': '#24A8BF',
       },
     },
     fontFamily: {

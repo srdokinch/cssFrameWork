@@ -49,6 +49,55 @@ Googleフォントやメディアクエリと合わせる技は[こっち](https
 </div>
 ```
 
+[Loop使う方法](https://tailwindcss.com/docs/reusing-styles#loops)
+さらにはmapを使う方法もあるみたい、これはnavとかで使えそうなイメージ
+
+##ホバー時のスタイルについて
+hoverについての公式ドキュメントは[ここ](https://tailwindcss.com/docs/hover-focus-and-other-states#hover)
+以下のように書くことでその要素をホバーしたときにどのような挙動になるか決めれる。
+```
+<div class="bg-black hover:bg-white ...">
+  <!-- ... -->
+</div>
+```
+ただこれだと地域情報で使っているaタグをホバーするとその子要素のimgをopacityかけるcssが使えないので```@apply```を使用する。
+Tailwindではbase > components > utilities の順でcssの優先度がつけれるらしい
+```
+<a href="hoge">
+  <img class="img-hover" src="sample.png">
+</a>
+
+.img-hover{
+  @apply hover:oapacity-8;
+}
+```
+
+##よくある矢印表示について
+以下のようなパーツを作成したいときに右側にある矢印をどう作るか迷った話
+![alt text](<スクリーンショット 2024-05-16 11.38.26.png>)
+個人的にすぐ思いついた実装方法は
+- 擬似要素を使いcssで矢印を作成する
+- 矢印を画像で書き出して背景画像として組み込む
+
+ただ、そうすると独自のcssが多くなってしまい個人的にあまりtailwindの良さを活かしきれていないのかなと思ったので今回は以下で実装してみることにしました。
+- 画像をsvgでマークアップ側に記述する
+```
+<a class="text-main-colour border-solid border rounded-sm border-main-colour w-full block" href="#">
+  <span>ブログ一覧</span>
+  <span>
+    <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4.5 4L0.75 7.89711V0.102886L4.5 4Z" fill="#24A8BF"/>
+    </svg>
+  </span>
+</a>
+```
+Tailwindで作られているサイトを参考にしてみたが、同じようにsvgで構築する方法が多かった。
+参考サイト1はニュースセクションの「ニュース一覧をみる」のボタンがsvgの実装
+参考サイト2はNewsセクションの各アイテムの右にボタンがありその矢印で使われている
+[参考サイト1](https://corp.infomart.co.jp/)
+[参考サイト2](https://cipicipi.jp/)
+
+
 
 
 ##メモ
@@ -58,4 +107,3 @@ Googleフォントやメディアクエリと合わせる技は[こっち](https
 これを使うといい感じにしてくれるらしい
 
 ✍️当たり前だけどクラス名が多いので慣れるまで少し大変かも。チートシート必須だが普段からemmetを使っていると似ているところが多々あるので慣れるスピードは早い。
-

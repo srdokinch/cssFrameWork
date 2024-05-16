@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .img-hover {
+    @apply hover:opacity-80;
+  }
+}
