@@ -18,9 +18,9 @@
     <section>
       <div class="md:flex">
         <div>
-          <img src="~/assets/images/concept.jpg" alt="青いカップのコーヒー" width="750" height="759">
+          <img class="w-100 h-50" src="~/assets/images/concept.jpg" alt="青いカップのコーヒー">
         </div>
-        <div class="py-8 px-5">
+        <div class="pt-8 px-5">
           <div>Concept</div>
           <h2 class="text-main-colour text-2xl font-semibold pt-4 pb-5 tracking-wider">心静かにコーヒーを</h2>
           <div class="leading-7 font-light">
@@ -36,23 +36,25 @@
 
     <!-- blog -->
     <section>
-      <div>
-        <h2>blog<span>ブログ</span></h2>
+      <div class="mt-20">
+        <h2 class="text-main-colour bold text-4xl text-center mb-6">blog<span
+            class="block text-black text-xs mt-1">ブログ</span></h2>
         <ul class="md:grid md:gap-8 md:grid-cols-3">
           <card />
         </ul>
-        <a class="text-main-colour border-solid border rounded-sm border-main-colour w-full block relative p-4 text-center" href="#">
+        <a class="text-main-colour border-solid border rounded-sm border-main-colour w-full block relative p-4 text-center mt-12 md:m-auto md:w-3/12"
+          href="#">
           <span>ブログ一覧</span>
           <span class="absolute bottom-[45%] right-6">
             <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.5 4L0.75 7.89711V0.102886L4.5 4Z" fill="#24A8BF"/>
+              <path d="M4.5 4L0.75 7.89711V0.102886L4.5 4Z" fill="#24A8BF" />
             </svg>
           </span>
         </a>
       </div>
     </section>
     <!-- /blog -->
-    
+
   </main>
 
   <Footer />
