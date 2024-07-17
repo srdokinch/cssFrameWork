@@ -18,9 +18,9 @@
     <section>
       <div class="md:flex">
         <div>
-          <img class="w-100 h-50" src="~/assets/images/concept.jpg" alt="青いカップのコーヒー">
+          <img class="w-100 md:w-[555px]" src="~/assets/images/concept.jpg" alt="青いカップのコーヒー">
         </div>
-        <div class="pt-8 px-5">
+        <div class="pt-8 px-5 md:flex md:flex-col md:justify-center">
           <div>Concept</div>
           <h2 class="text-main-colour text-2xl font-semibold pt-4 pb-5 tracking-wider">心静かにコーヒーを</h2>
           <div class="leading-7 font-light">
@@ -39,9 +39,9 @@
       <div class="mt-20">
         <h2 class="text-main-colour bold text-4xl text-center mb-6">blog<span
             class="block text-black text-xs mt-1">ブログ</span></h2>
-        <ul class="md:grid md:gap-8 md:grid-cols-3">
-          <card />
-        </ul>
+        <!-- カードの読み込み -->
+        <card />
+        <!-- カードの読み込み -->
         <a class="text-main-colour border-solid border rounded-sm border-main-colour w-full block relative p-4 text-center mt-12 md:m-auto md:w-3/12"
           href="#">
           <span>ブログ一覧</span>
